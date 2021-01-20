@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {cars} from '../../CarsComponent/Cars';
-import {CarInterface} from '../Inerface/car.interface';
+import {CarInterface} from '../InerfaceCars/car.interface';
 
 @Component({
   selector: 'app-cars-page',
