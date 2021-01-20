@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {cars} from '../../CarsComponent/Cars';
+import {CarInterface} from '../Inerface/car.interface';
 
 @Component({
   selector: 'app-cars-page',
@@ -7,5 +8,5 @@ import {cars} from '../../CarsComponent/Cars';
   styleUrls: ['./cars-page.component.css']
 })
 export class CarsPageComponent {
-  cars = cars;
+  cars: CarInterface[] = cars;
 }

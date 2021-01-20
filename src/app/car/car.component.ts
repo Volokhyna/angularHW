@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {CarInterface} from '../Inerface/car.interface';
 
 @Component({
   selector: 'app-car',
@@ -7,6 +8,6 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class CarComponent  {
   @Input()
-  car: any;
+  car: CarInterface;
 }
 
