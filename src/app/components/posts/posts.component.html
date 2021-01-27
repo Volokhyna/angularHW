@@ -1,0 +1,3 @@
+<h1>{{showOne?.title}} {{showOne?.id}}</h1>
+<hr/>
+<app-post *ngFor="let onePost of posts" [post]="onePost" (bubleUpPost)="getBubblePost($event)"></app-post>

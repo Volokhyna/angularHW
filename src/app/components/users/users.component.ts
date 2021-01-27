@@ -9,7 +9,6 @@ import {UserService} from '../../services/user.service';
 })
 export class UsersComponent implements OnInit {
   users: User[];
-
   chosenOne: User;
 
   constructor(private userService: UserService) {
@@ -20,7 +19,6 @@ export class UsersComponent implements OnInit {
   }
 
   getBubbleUser(user): void {
-    console.log(user);
     this.chosenOne = user;
   }
 }
