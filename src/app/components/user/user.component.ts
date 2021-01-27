@@ -11,7 +11,7 @@ export class UserComponent implements OnInit {
   @Input()
   user: User;
   @Output()
-  bubleUpUser = new EventEmitter();
+  bubleUpUser = new EventEmitter<User>();
 
   constructor() { }
 

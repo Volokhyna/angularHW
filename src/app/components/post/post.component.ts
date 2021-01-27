@@ -10,7 +10,7 @@ export class PostComponent implements OnInit {
   @Input()
   post: Post;
   @Output()
-  bubleUpPost = new EventEmitter();
+  bubleUpPost = new EventEmitter<Post>();
   constructor() { }
 
   ngOnInit(): void {
