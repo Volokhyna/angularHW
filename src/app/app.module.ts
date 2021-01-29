@@ -1,28 +1,36 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { ComponentsComponent } from './components/components.component';
-import { UsersComponent } from './components/users/users.component';
-import { HttpClientModule} from '@angular/common/http';
-import { UserComponent } from './components/user/user.component';
-import { PostsComponent } from './components/posts/posts.component';
-import { PostComponent } from './components/post/post.component';
+import {AppComponent} from './app.component';
+import {CarsComponent} from './components/cars/cars.component';
+import {CarComponent} from './components/car/car.component';
+import {RouterModule} from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
+import { FullCarComponent } from './components/full-car/full-car.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ComponentsComponent,
-    UsersComponent,
-    UserComponent,
-    PostsComponent,
-    PostComponent,
+    CarsComponent,
+    CarComponent,
+    HomeComponent,
+    FullCarComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    RouterModule,
+    RouterModule.forRoot([{
+      path: 'link/home', component: HomeComponent,
+    },
+      {
+      path: 'link/cars', component: CarsComponent, children: [{
+          path: ':id', component: FullCarComponent,
+        }]
+    }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
