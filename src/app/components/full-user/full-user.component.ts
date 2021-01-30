@@ -19,5 +19,5 @@ export class FullUserComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
+

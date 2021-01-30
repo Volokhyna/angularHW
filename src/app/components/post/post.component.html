@@ -1,6 +1,6 @@
-<div>
+<div [className]="['post']">
   {{post.userId}}
   {{'/'}}
-  {{post.body}}
-  <hr/>
+  {{post.title}}
+  <button (click)="gotoInfo()"> info </button>
 </div>

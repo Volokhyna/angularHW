@@ -1,11 +1,11 @@
-import {UserAdress} from './user-adress';
+import {UserAddress} from './user-address';
 
 export interface User {
   id: number;
   name: string;
   username: string;
   email: string;
-  adress: UserAdress;
+  address: UserAddress;
 }
 
 

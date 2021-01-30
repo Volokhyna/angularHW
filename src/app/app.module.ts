@@ -10,12 +10,16 @@ import {PostComponent} from './components/post/post.component';
 import {RouterModule, Routes} from '@angular/router';
 import {UserResolveService} from './services/user-resolve.service';
 import { FullUserComponent } from './components/full-user/full-user.component';
+import {PostResolveService} from './services/post-resolve.service';
+import { FullPostComponent } from './components/full-post/full-post.component';
 
 const routes: Routes = [
   {path: 'users', component: UsersComponent, resolve: {usersData: UserResolveService}, children: [
       {path: ':id', component: FullUserComponent}
     ]},
-  {path: 'posts', component: PostsComponent},
+  {path: 'posts', component: PostsComponent, resolve: {postsData: PostResolveService}, children: [
+      {path: ':id', component: FullPostComponent}
+    ]},
 ];
 
 @NgModule({
@@ -26,6 +30,7 @@ const routes: Routes = [
     PostsComponent,
     PostComponent,
     FullUserComponent,
+    FullPostComponent,
   ],
   imports: [
     BrowserModule,
