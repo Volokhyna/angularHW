@@ -1,3 +1,3 @@
-<h1>{{chosenOne?.id}} {{chosenOne?.username}}</h1>
-<hr/>
-<app-user *ngFor="let oneUser of users" [user]="oneUser" (bubleUpUser)="getBubbleUser($event)"></app-user>
+
+<app-user *ngFor="let oneUser of users" [user]="oneUser"></app-user>
+<router-outlet></router-outlet>
