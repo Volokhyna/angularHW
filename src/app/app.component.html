@@ -1,33 +1,10 @@
-<form [formGroup]="myForm" (ngSubmit)="showUser()">
-  <div>
-    <div [className]="['warning']"
-         *ngIf="name.errors?.required">
-      *This is required input
-    </div>
-     Name <input [formControl]="name">
-    <div [className]="['warning']"
-      *ngIf="name.errors?.error">
-      {{name.errors?.msg}}
-    </div>
-    <div [className]="['warning']"
-         *ngIf="!!name.errors?.minlength">
-      Required length - {{name.errors?.minlength?.requiredLength}},
-      Actual length - {{name.errors?.minlength?.actualLength}}
-    </div>
-  </div>
-  <hr/>
-  <div>
-    <div [className]="['warning']"
-         *ngIf="phone.errors?.required">
-      *This is required input
-    </div>
-    Phone <input [formControl]="phone">
-  </div>
-  <div [className]="['warning']"
-       *ngIf="!!phone.errors?.minlength">
-    Required length - {{phone.errors?.minlength?.requiredLength}},
-    Actual length - {{phone.errors?.minlength?.actualLength}}
-  </div>
-  <hr/>
-  <button [disabled]="myForm.invalid"> Save </button>
-</form>
+<ul>
+  <li>
+    <a routerLink="users">Users</a>
+  </li>
+  <li>
+    <a routerLink="posts">Posts</a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
