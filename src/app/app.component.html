@@ -1,10 +1,10 @@
-<ul>
-  <li>
-    <a routerLink="users">Users</a>
-  </li>
-  <li>
-    <a routerLink="posts">Posts</a>
-  </li>
-</ul>
+<div appRed>{{title | uppercase}}</div>
 
-<router-outlet></router-outlet>
+{{title | lowercase}}
+<hr/>
+{{count | percent: '2.1'}}
+<hr/>
+{{time | async}}
+<hr/>
+<div appRed>{{'Hello Alina, ' | custom}}</div>
+
